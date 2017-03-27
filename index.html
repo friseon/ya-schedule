@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Yandex - schedule</title>
+        <link rel="stylesheet" href="assets/css/styles.css" asp-append-version="true" />
+    </head>
+    <body>
+        <main class="main">
+            <header>
+                <a class="ya-logo" href="https://yandex.ru">Яндекс</a>
+            </header>
+            <aside class="main_container">
+                <div class="main_info">
+                    <p>Добрый день!</p>
+                    <p>Представляю вам свое решение тестового Задания 1. Моя цель была реализовать его только с помощью <b>HTML</b> и <b>CSS</b>. Такой выбор сделан, чтобы лучше соответствовать цели задания — проверка навыков верстки. В оформлении постарался держаться вашего корпоративного стиля, надеюсь за это простите и сильно ругать не станете. :)</p>
+                </div>
+                <!-- Filter -->
+                <!-- School -->
+                <h4 class="filter_title">Школа</h4>
+                <input class="filter-button" type="checkbox" id="school-interface" checked/>
+                <label for="school-interface">разработка интерфейсов</label>
+
+                <input class="filter-button" type="checkbox" id="school-mobile"/>
+                <label for="school-mobile">мобильная разработка</label>
+
+                <input class="filter-button" type="checkbox" id="school-design"/>
+                <label for="school-design">мобильный дизайн</label>
+                <!-- Date -->
+                <h4 class="filter_title">Месяц</h4>
+                <input class="filter-button filter-date" type="checkbox" id="date-october" checked/>
+                <label for="date-october">Октябрь</label>
+
+                <input class="filter-button filter-date" type="checkbox" id="date-november"/>
+                <label for="date-november">Нобярь</label>
+
+                <input class="filter-button filter-date" type="checkbox" id="date-december"/>
+                <label for="date-december">Дeкабрь</label>
+                <!-- Lector -->
+                <h4 class="filter_title">Лектор</h4>
+                <!-- разработка интерфейсов -->
+                <input class="filter-button filter-interface" type="checkbox" id="lector-dushkin" checked/>
+                <label for="lector-dushkin"></label>
+                <input class="filter-button filter-interface" type="checkbox" id="lector-berejnoy" checked/>
+                <label for="lector-berejnoy"></label>  
+                <input class="filter-button filter-interface" type="checkbox" id="lector-morozov" checked/>
+                <label for="lector-morozov"></label>
+                <input class="filter-button filter-interface" type="checkbox" id="lector-karev" checked/>
+                <label for="lector-karev"></label>
+                <input class="filter-button filter-interface" type="checkbox" id="lector-prokopyuk" checked/>
+                <label for="lector-prokopyuk"></label>
+                <!-- /разработка интерфейсов -->
+                <br>
+                <!-- мобильная разработка -->
+                <div class="block-mobile">
+                    <br>
+                    <hr>
+                    <br>
+                </div>
+                <input class="filter-button filter-mobile" type="checkbox" id="lector-macukov" checked/>
+                <label for="lector-macukov"></label>
+                <input class="filter-button filter-mobile" type="checkbox" id="lector-skladnov" checked/>
+                <label for="lector-skladnov"></label>
+                <input class="filter-button filter-mobile" type="checkbox" id="lector-grigorev" checked/>
+                <label for="lector-grigorev"></label>
+                <input class="filter-button filter-mobile" type="checkbox" id="lector-sherbinin" checked/>
+                <label for="lector-sherbinin"></label>
+                <input class="filter-button filter-mobile" type="checkbox" id="lector-makarov" checked/>
+                <label for="lector-makarov"></label>
+                <!-- /мобильная разработка -->            
+                <!-- мобильная разработка -->
+                <div class="block-design">
+                    <br>
+                    <hr>
+                    <br>
+                </div>    
+                <input class="filter-button filter-design" type="checkbox" id="lector-ten" checked/>
+                <label for="lector-ten"></label>
+                <input class="filter-button filter-design" type="checkbox" id="lector-vasyunin" checked/>
+                <label for="lector-vasyunin"></label>
+                <!-- /мобильная разработка -->
+                <!-- /Filter -->
+
+                <div class="main_content">
+                    <h4 class="filter_title">Доклады</h4>
+                    <div class="month-container" data-tags="date-october">
+                        <div class="shedule_title">
+                            <h4>октябрь 2016</h4>
+                        </div>
+                        <table class="shedule_table">
+                            <tr data-tags="school-сommon lector-dushkin ended" title="Лекция уже прошла">
+                                <td class="shedule_date">2</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Как верстальщик проводил миграцию БД и другие мифы древней Греции</td>
+                                <td class="shedule_author"><a href="#dushkin"></a></td>
+                            </tr>
+                            <tr data-tags="school-design lector-ten">
+                                <td class="shedule_date" rowspan="2">18</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 1. Идея, исследование, концепт (Часть 1)</td>
+                                <td class="shedule_author"><a href="#ten"></a></td>
+                            </tr>
+                            <tr data-tags="school-design lector-ten">
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 2. Идея, исследование, концепт (Часть 2)</td>
+                                <td class="shedule_author"><a href="#ten"></a></td>
+                            </tr>
+                            <tr data-tags="school-mobile lector-macukov">
+                                <td class="shedule_date" rowspan="2">19</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 1. Java Blitz (Часть 1)</td>
+                                <td class="shedule_author"><a href="#macukov"></a></td>
+                            </tr>
+                            <tr data-tags="school-mobile lector-skladnov">
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 2. Git & Workflow</td>
+                                <td class="shedule_author"><a href="#skladnov"></a></td>
+                            </tr>
+                            <tr data-tags="school-interface lector-dushkin">
+                                <td class="shedule_date">20</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 1. Адаптивная вёрстка</td>
+                                <td class="shedule_author"><a href="#dushkin"></a></td>
+                            </tr>
+                            <tr data-tags="school-design lector-vasyunin">
+                                <td class="shedule_date">25</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 3. Особенности проектирования мобильных интерфейсов</td>
+                                <td class="shedule_author"><a href="#vasyunin"></a></td>
+                            </tr>
+                            <tr data-tags="school-mobile lector-macukov">
+                                <td class="shedule_date" rowspan="2">25</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 3. Java Blitz (Часть 2)</td>
+                                <td class="shedule_author"><a href="#macukov"></a></td>
+                            </tr>
+                            <tr data-tags="school-mobile lector-grigorev">
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 4. MyFirstApp (Часть 1)</td>
+                                <td class="shedule_author"><a href="#grigorev"></a></td>
+                            </tr>
+                            <tr data-tags="school-interface lector-dushkin">
+                                <td class="shedule_date">27</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 2. Работа с сенсорным пользовательским вводом</td>
+                                <td class="shedule_author"><a href="#dushkin"></a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="month-container" data-tags="date-november">
+                        <div class="shedule_title">
+                            <h4>ноябрь 2016</h4>
+                        </div>
+                        <table class="shedule_table">
+                            <tr data-tags="school-mobile lector-grigorev">
+                                <td class="shedule_date" rowspan="2">2</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 5. MyFirstApp (Часть 2)</td>
+                                <td class="shedule_author"><a href="#grigorev"></a></td>
+                            </tr>
+                            <tr data-tags="school-mobile lector-sherbinin">
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 6. ViewGroup</td>
+                                <td class="shedule_author"><a href="#sherbinin"></a></td>
+                            </tr>
+                            <tr data-tags="school-interface lector-dushkin">
+                                <td class="shedule_date">3</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 3. Мультимедиа: возможности браузера</td>
+                                <td class="shedule_author"><a href="#dushkin"></a></td>
+                            </tr>
+                            <tr data-tags="school-interface lector-berejnoy">
+                                <td class="shedule_date">10</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 4. Нативные приложения на веб-технологиях</td>
+                                <td class="shedule_author"><a href="#berejnoy"></a></td>
+                            </tr>
+                            <tr data-tags="school-interface lector-morozov">
+                                <td class="shedule_date">17</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 5. Клиентская оптимизация: базовые знания и лучшие практики</td>
+                                <td class="shedule_author"><a href="#morozov"></a></td>
+                            </tr>
+                            <tr data-tags="school-сommon lector-berejnoy">
+                                <td class="shedule_date">20</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Как объяснить flexbox, если к вам пристали в тёмном переулке</td>
+                                <td class="shedule_author"><a href="#berejnoy"></a></td>
+                            </tr>
+                            <tr data-tags="school-interface lector-morozov">
+                                <td class="shedule_date">24</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 6. Клиентская оптимизация: мобильные устройства и инструменты</td>
+                                <td class="shedule_author"><a href="#morozov"></a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="month-container" data-tags="date-december">
+                        <div class="shedule_title">
+                            <h4>декабрь 2016</h4>
+                        </div>
+                        <table class="shedule_table">
+                            <tr data-tags="school-interface lector-prokopyuk">
+                                <td class="shedule_date" rowspan="2">1</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 7. Инфраструктура веб-проектов</td>
+                                <td class="shedule_author"><a href="#prokopyuk"></a></td>
+                            </tr>
+                            <tr data-tags="school-interface lector-prokopyuk">
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Лекция 8. Инструменты разработки мобильного фронтенда</td>
+                                <td class="shedule_author"><a href="#prokopyuk"></a></td>
+                            </tr>
+                            <tr data-tags="school-сommon lector-vasyunin">
+                                <td class="shedule_date">13</td>
+                                <td class="shedule_school"></td>
+                                <td class="shedule_lection">Вейпинг, смузинг, гироскутер, подвернутые штаны — четыре всадника Апокалипсиса</td>
+                                <td class="shedule_author"><a href="#vasyunin"></a></td>
+                            </tr>
+                        </table>
+                    </div>                    
+                </div>
+                <!-- modals: authors -->
+                <div class="authors">                
+                    <div id="macukov" class="modal">
+                        <div class="modal_body">
+                            <a href="#" title="Close" class="modal_close">x</a>
+                            <h1 class="modal_title">
+                                Эдуард Мацуков
+                            </h1>
+                            <p class="modal_info">
+                                Разрабатываю приложения для Android с 2010 года. В 2014 делал высоконагруженное финансовое приложение. Тогда же начал осваивать АОП, внедряя язык в продакшн. В 2015 разрабатывал Инструментыы для Android Studio, позволяющие использовать aspectJ в своих проектах. В Яндексе занят на проекте Авто.ру.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="prokopyuk" class="modal">
+                        <div class="modal_body">
+                            <a href="#" title="Close" class="modal_close">x</a>
+                            <h1 class="modal_title">
+                                Андрей Прокопюк
+                            </h1>
+                            <p class="modal_info">
+                                В 2008 году впечатлился веб-разработкой из-за скорости воплощения идей и лёгкость их донесения до пользователей. В Яндексе с 2014 года, разрабатывает страницу поисковой выдачи. Любит сложные задачи, интересуется аналитикой, тестированием и новыми способами автоматизировать рутину.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="morozov" class="modal">
+                        <div class="modal_body">
+                            <a href="#" title="Close" class="modal_close">x</a>
+                            <h1 class="modal_title">
+                                Андрей Морозов
+                            </h1>
+                            <p class="modal_info">
+                                Окончил радиофизический факультет Киевского Национального Университета. Автор трёх патентных заявок. В Яндексе с 2014 года, разрабатывает интерфейсы Яндекс.Карт.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="berejnoy" class="modal">
+                        <div class="modal_body">
+                            <a href="#" title="Close" class="modal_close">x</a>
+                            <h1 class="modal_title">
+                                Сергей Бережной
+                            </h1>
+                            <p class="modal_info">
+                                Веб-разработчик в Яндексе с 2005 года. Успел поработать над Поиском, Почтой, Поиском по блогам, Я.ру, Картинками, Видео. Помимо этого, активно занимается развитием внутренних инструментов для создания сайтов.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="dushkin" class="modal">
+                        <div class="modal_body">
+                            <a href="#" title="Close" class="modal_close">x</a>
+                            <h1 class="modal_title">
+                                Дмитрий Душкин
+                            </h1>
+                            <p class="modal_info">
+                                Кандидат технических наук, научный сотрудник ИПУ РАН с 2008 по 2013. Пришёл в Яндекс.Картинки в 2014 году, отвечал за мобильную версию и рост производительности сервиса. В 2016 перешёл в Yandex Data Factory, где разрабатывает интерфейсы и дизайн веб-приложений для B2B.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="berejnoy" class="modal">
+                        <div class="modal_body">
+                            <a href="#" title="Close" class="modal_close">x</a>
+                            <h1 class="modal_title">
+                                Сергей Бережной
+                            </h1>
+                            <p class="modal_info">
+                                Веб-разработчик в Яндексе с 2005 года. Успел поработать над Поиском, Почтой, Поиском по блогам, Я.ру, Картинками, Видео. Помимо этого, активно занимается развитием внутренних инструментов для создания сайтов.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="sherbinin" class="modal">
+                        <div class="modal_body">
+                            <a href="#" title="Close" class="modal_close">x</a>
+                            <h1 class="modal_title">
+                                Алексей Щербинин
+                            </h1>
+                            <p class="modal_info">
+                                Профессионал с глубокими познаниями в графической части Android и всего, что с ней связано. Любит нестандартные задачи и решает их в команде мобильного Яндекс Браузера.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="grigorev" class="modal">
+                        <div class="modal_body">
+                            <a href="#" title="Close" class="modal_close">x</a>
+                            <h1 class="modal_title">
+                                Роман Григорьев
+                            </h1>
+                            <p class="modal_info">
+                                Окончил Самарский университет. Разрабатывает приложения для Android с 2010 года. В Яндексе — с 2012-го. Руководит разработкой мобильных клиентов Яндекс.Диска.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="vasyunin" class="modal">
+                        <div class="modal_body">
+                            <a href="#" title="Close" class="modal_close">x</a>
+                            <h1 class="modal_title">
+                                Васюнин Николай
+                            </h1>
+                            <p class="modal_info">
+                                Пришёл в Яндекс в 2014 году. Дизайнер продукта в музыкальных сервисах компании, участник команды разработки Яндекс.Радио.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="ten" class="modal">
+                        <div class="modal_body">
+                            <a href="#" title="Close" class="modal_close">x</a>
+                            <h1 class="modal_title">
+                                Антон Тен
+                            </h1>
+                            <p class="modal_info">
+                                В Яндексе с 2014 года. Ведущий дизайнер продукта в сервисах Переводчик, Расписания и Видео.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /modals: authors -->
+            </aside>            
+        </main>
+    </body>
+</html>

@@ -1,0 +1,405 @@
+html,
+body {
+	position: static;
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+    min-width: 1000px;
+}
+
+header {
+	position: relative;
+	display: block;
+	background-color: #E61400;
+	padding: 0 44px;
+	color: #fff;
+    height: 70px;
+}
+
+.ya-logo {
+	position: absolute;
+	top: 50%;
+	left: 44px;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: inline-block;
+	height: 26px;
+	width: 60px;
+	background-image: url(../img/ya_logo.png);
+	background-size: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	text-indent: 100%;
+}
+
+.main_container {
+	display: block;
+	padding: 40px 15%;
+}
+
+.main_info {
+	margin-top: 40px;
+    font-weight: 300;
+}
+
+.main_info p {
+    margin-bottom: 32px;
+    margin: 0 0 .8em;
+    line-height: 1.4em;
+}
+
+/* filter-decoration */
+
+.filter_title {
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.filter-button + label {
+	display: inline-block;
+    padding: 0 18px;
+    margin: 2px; 
+	background-color: transparent;
+	box-shadow: inset 0px 0px 0px 2px #C1C1C1;
+	color: #C1C1C1;
+	border-radius: 4px;
+	font-size: 18px;
+	height: 40px;
+	line-height: 38px;
+    cursor: pointer;
+}
+
+#school-mobile:checked + label,
+.filter-button.filter-mobile:checked + label {
+	background-color: #28916E;
+	color: #FFF;
+}
+
+#school-design:checked + label,
+.filter-button.filter-design:checked + label {
+	background-color: #0D0D0D;
+	color: #FFF;
+}
+
+.filter-button.filter-date:checked + label {
+	background-color: #dc0000;
+	color: #FFF;
+}
+
+.filter-button + label:hover {
+    box-shadow: inset 0px 0px 0px 2px #323232;
+    color: #323232;
+}
+.filter-button:checked + label {
+	background-color: #fee133;
+	color: #323232;
+	box-shadow: inset 0 -2px rgba(0,0,0,.3);
+}
+.filter-button {
+	display: none;
+}
+
+/* shedule */
+
+.shedule_title {
+	position: relative;
+	margin: 50px 0 20px;
+}
+
+.shedule_title::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 0;
+	height: 3px;
+	width: 100%;
+	background-color: #dc0000;
+	z-index: -1;
+}
+
+.shedule_title h4 {
+	display: inline-block;
+	margin: 0;
+	font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 65px;
+    padding: 8px 20px;
+    letter-spacing: 2px;
+    color: #dc0000;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.shedule_table {
+	width: 100%;
+}
+
+.shedule_table tr:not([data-tags~="school-сommon"]) {
+	display: none;
+}
+
+.shedule_table tr[data-tags~="ended"] > td,
+.shedule_table tr[data-tags~="ended"] > td * {
+	opacity: .2;
+}
+
+.shedule_table td {
+	vertical-align: top;
+	padding: 4px;
+}
+
+.shedule_date {
+	width: 50px;
+}
+
+.shedule_school {
+	width: 25%;
+	color: #000;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.shedule_lection {
+	width: auto;
+}
+
+.shedule_author {
+	position: relative;
+	width: 25%;
+}
+
+.shedule_author > a {
+	text-decoration: none;
+	color: #000;
+}
+
+.shedule_author > a:hover {
+	color: #dc0000;
+}
+
+.shedule_author > a:after {
+	padding-left: 12px;
+	font-size: 15px;
+	color: rgba(0,0,0,.4);
+	content: 'Яндекс';
+}
+
+/* filter-controllers */
+
+.filter-interface + label,
+.filter-mobile + label,
+.filter-design + label,
+.block-mobile,
+.block-design {
+	display: none;
+}
+
+input#school-interface:checked ~ .filter-interface + label,
+input#school-mobile:checked ~ .filter-mobile + label,
+input#school-design:checked ~ .filter-design + label {
+	display: inline-block;
+}
+
+input#school-mobile:checked ~ .block-mobile,
+input#school-design:checked ~ .block-design {
+	display: block;
+}
+
+/* filter-controller: date */
+
+.month-container {
+	display: none;
+}
+
+input#date-october:checked ~ .main_content *[data-tags~="date-october"] {
+	display: block;
+}
+input#date-november:checked ~ .main_content *[data-tags~="date-november"] {
+	display: block;
+}
+input#date-december:checked ~ .main_content *[data-tags~="date-december"] {
+	display: block;
+}
+
+/* filter-controller: interface */
+
+input#school-interface:checked ~ input#lector-dushkin:checked ~ .main_content *[data-tags~="lector-dushkin"] {
+	display: table-row;
+}
+input#school-interface:checked ~ input#lector-berejnoy:checked ~ .main_content *[data-tags~="lector-berejnoy"] {
+	display: table-row;
+}
+input#school-interface:checked ~ input#lector-morozov:checked ~ .main_content *[data-tags~="lector-morozov"] {
+	display: table-row;
+}
+input#school-interface:checked ~ input#lector-karev:checked ~ .main_content *[data-tags~="lector-karev"] {
+	display: table-row;
+}
+input#school-interface:checked ~ input#lector-prokopyuk:checked ~ .main_content *[data-tags~="lector-prokopyuk"] {
+	display: table-row;
+}
+
+/* filter-controller: mobile */
+
+input#school-mobile:checked ~ input#lector-macukov:checked ~ .main_content *[data-tags~="lector-macukov"] {
+	display: table-row;
+}
+input#school-mobile:checked ~ input#lector-skladnov:checked ~ .main_content *[data-tags~="lector-skladnov"] {
+	display: table-row;
+}
+input#school-mobile:checked ~ input#lector-grigorev:checked ~ .main_content *[data-tags~="lector-grigorev"] {
+	display: table-row;
+}
+input#school-mobile:checked ~ input#lector-sherbinin:checked ~ .main_content *[data-tags~="lector-sherbinin"] {
+	display: table-row;
+}
+input#school-mobile:checked ~ input#lector-makarov:checked ~ .main_content *[data-tags~="lector-makarov"] {
+	display: table-row;
+}
+
+/* filter-controller: design */
+
+input#school-design:checked ~ input#lector-ten:checked ~ .main_content *[data-tags~="lector-ten"] {
+	display: table-row;
+}
+input#school-design:checked ~ input#lector-vasyunin:checked ~ .main_content *[data-tags~="lector-vasyunin"] {
+	display: table-row;
+}
+
+/* contents */
+
+*[data-tags~="school-interface"] .shedule_school:before {
+	content: 'разработка интерфейсов';
+}
+
+*[data-tags~="school-mobile"] .shedule_school:before {
+	content: 'мобильная разработка';
+}
+
+*[data-tags~="school-design"] .shedule_school:before {
+	content: 'мобильный дизайн';
+}
+
+*[data-tags~="school-design"] .shedule_school:before {
+	content: 'мобильный дизайн';
+}
+
+*[data-tags~="school-сommon"] .shedule_school:before {
+	content: 'общая лекция';
+}
+
+*[data-tags~="lector-dushkin"] .shedule_author > a:before,
+#lector-dushkin + label:before {
+	content: 'Дмитрий Душкин';
+}
+*[data-tags~="lector-berejnoy"] .shedule_author > a:before,
+#lector-berejnoy + label:before {
+	content: 'Сергей Бережной';
+}
+*[data-tags~="lector-morozov"] .shedule_author > a:before,
+#lector-morozov + label:before {
+	content: 'Андрей Морозов';
+}
+*[data-tags~="lector-karev"] .shedule_author > a:before,
+#lector-karev + label:before {
+	content: 'Иван Карев';
+}
+*[data-tags~="lector-prokopyuk"] .shedule_author > a:before,
+#lector-prokopyuk + label:before {
+	content: 'Андрей Прокопюк';
+}
+
+*[data-tags~="lector-macukov"] .shedule_author > a:before,
+#lector-macukov + label:before {
+	content: 'Эдуард Мацуков';
+}
+*[data-tags~="lector-skladnov"] .shedule_author > a:before,
+#lector-skladnov + label:before {
+	content: 'Дмитрий Складнов';
+}
+*[data-tags~="lector-grigorev"] .shedule_author > a:before,
+#lector-grigorev + label:before {
+	content: 'Роман Григорьев';
+}
+*[data-tags~="lector-sherbinin"] .shedule_author > a:before,
+#lector-sherbinin + label:before {
+	content: 'Алексей Щербинин';
+}
+*[data-tags~="lector-makarov"] .shedule_author > a:before,
+#lector-makarov + label:before {
+	content: 'Алексей Макаров';
+}
+
+*[data-tags~="lector-ten"] .shedule_author > a:before,
+#lector-ten + label:before {
+	content: 'Антон Тен';
+}
+*[data-tags~="lector-vasyunin"] .shedule_author > a:before,
+#lector-vasyunin + label:before {
+	content: 'Николай Васюнин';
+}
+
+/* modal */
+
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 999;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.modal:target {
+	-webkit-transition: all .5s ease-in;
+	-moz-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.modal_body {
+	width: 60%;
+	min-width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 40px 60px;
+	background-color: #fff;
+	border-bottom: 4px red solid;
+}
+
+.modal_title {
+	font-size: 48px;
+}
+
+.modal_info {
+	line-height: 1.5;
+}
+
+.modal_close {
+	color: #aaa;
+	position: absolute;
+	right: 8px;
+	top: 4px;
+	text-decoration: none;
+	-moz-transform: scale(1.4, 1);
+	-webkit-transform: scale(1.4, 1);
+	-o-transform: scale(1.4, 1);
+	-ms-transform: scale(1.4, 1);
+}
