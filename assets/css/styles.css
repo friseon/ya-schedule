@@ -105,14 +105,14 @@ header {
 	display: none;
 }
 
-/* shedule */
+/* schedule */
 
-.shedule_title {
+.schedule_title {
 	position: relative;
 	margin: 50px 0 20px;
 }
 
-.shedule_title::before {
+.schedule_title::before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -129,7 +129,7 @@ header {
 	z-index: -1;
 }
 
-.shedule_title h4 {
+.schedule_title h4 {
 	display: inline-block;
 	margin: 0;
 	font-size: 18px;
@@ -143,54 +143,54 @@ header {
     z-index: 100;
 }
 
-.shedule_table {
+.schedule_table {
 	width: 100%;
 }
 
-.shedule_table tr:not([data-tags~="school-сommon"]) {
+.schedule_table tr:not([data-tags~="school-сommon"]) {
 	display: none;
 }
 
-.shedule_table tr[data-tags~="ended"] > td,
-.shedule_table tr[data-tags~="ended"] > td * {
+.schedule_table tr[data-tags~="ended"] > td,
+.schedule_table tr[data-tags~="ended"] > td * {
 	opacity: .2;
 }
 
-.shedule_table td {
+.schedule_table td {
 	vertical-align: top;
 	padding: 4px;
 }
 
-.shedule_date {
+.schedule_date {
 	width: 50px;
 }
 
-.shedule_school {
+.schedule_school {
 	width: 25%;
 	color: #000;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-.shedule_lection {
+.schedule_lection {
 	width: auto;
 }
 
-.shedule_author {
+.schedule_author {
 	position: relative;
 	width: 25%;
 }
 
-.shedule_author > a {
+.schedule_author > a {
 	text-decoration: none;
 	color: #000;
 }
 
-.shedule_author > a:hover {
+.schedule_author > a:hover {
 	color: #dc0000;
 }
 
-.shedule_author > a:after {
+.schedule_author > a:after {
 	padding-left: 12px;
 	font-size: 15px;
 	color: rgba(0,0,0,.4);
@@ -281,73 +281,73 @@ input#school-design:checked ~ input#lector-vasyunin:checked ~ .main_content *[da
 
 /* contents */
 
-*[data-tags~="school-interface"] .shedule_school:before {
+*[data-tags~="school-interface"] .schedule_school:before {
 	content: 'разработка интерфейсов';
 }
 
-*[data-tags~="school-mobile"] .shedule_school:before {
+*[data-tags~="school-mobile"] .schedule_school:before {
 	content: 'мобильная разработка';
 }
 
-*[data-tags~="school-design"] .shedule_school:before {
+*[data-tags~="school-design"] .schedule_school:before {
 	content: 'мобильный дизайн';
 }
 
-*[data-tags~="school-design"] .shedule_school:before {
+*[data-tags~="school-design"] .schedule_school:before {
 	content: 'мобильный дизайн';
 }
 
-*[data-tags~="school-сommon"] .shedule_school:before {
+*[data-tags~="school-сommon"] .schedule_school:before {
 	content: 'общая лекция';
 }
 
-*[data-tags~="lector-dushkin"] .shedule_author > a:before,
+*[data-tags~="lector-dushkin"] .schedule_author > a:before,
 #lector-dushkin + label:before {
 	content: 'Дмитрий Душкин';
 }
-*[data-tags~="lector-berejnoy"] .shedule_author > a:before,
+*[data-tags~="lector-berejnoy"] .schedule_author > a:before,
 #lector-berejnoy + label:before {
 	content: 'Сергей Бережной';
 }
-*[data-tags~="lector-morozov"] .shedule_author > a:before,
+*[data-tags~="lector-morozov"] .schedule_author > a:before,
 #lector-morozov + label:before {
 	content: 'Андрей Морозов';
 }
-*[data-tags~="lector-karev"] .shedule_author > a:before,
+*[data-tags~="lector-karev"] .schedule_author > a:before,
 #lector-karev + label:before {
 	content: 'Иван Карев';
 }
-*[data-tags~="lector-prokopyuk"] .shedule_author > a:before,
+*[data-tags~="lector-prokopyuk"] .schedule_author > a:before,
 #lector-prokopyuk + label:before {
 	content: 'Андрей Прокопюк';
 }
 
-*[data-tags~="lector-macukov"] .shedule_author > a:before,
+*[data-tags~="lector-macukov"] .schedule_author > a:before,
 #lector-macukov + label:before {
 	content: 'Эдуард Мацуков';
 }
-*[data-tags~="lector-skladnov"] .shedule_author > a:before,
+*[data-tags~="lector-skladnov"] .schedule_author > a:before,
 #lector-skladnov + label:before {
 	content: 'Дмитрий Складнов';
 }
-*[data-tags~="lector-grigorev"] .shedule_author > a:before,
+*[data-tags~="lector-grigorev"] .schedule_author > a:before,
 #lector-grigorev + label:before {
 	content: 'Роман Григорьев';
 }
-*[data-tags~="lector-sherbinin"] .shedule_author > a:before,
+*[data-tags~="lector-sherbinin"] .schedule_author > a:before,
 #lector-sherbinin + label:before {
 	content: 'Алексей Щербинин';
 }
-*[data-tags~="lector-makarov"] .shedule_author > a:before,
+*[data-tags~="lector-makarov"] .schedule_author > a:before,
 #lector-makarov + label:before {
 	content: 'Алексей Макаров';
 }
 
-*[data-tags~="lector-ten"] .shedule_author > a:before,
+*[data-tags~="lector-ten"] .schedule_author > a:before,
 #lector-ten + label:before {
 	content: 'Антон Тен';
 }
-*[data-tags~="lector-vasyunin"] .shedule_author > a:before,
+*[data-tags~="lector-vasyunin"] .schedule_author > a:before,
 #lector-vasyunin + label:before {
 	content: 'Николай Васюнин';
 }
